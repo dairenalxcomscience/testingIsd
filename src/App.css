@@ -1,42 +1,137 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css */
+
+/* Reset & Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8fafc; /* Latar belakang abu-abu sangat muda */
+  color: #1e293b; /* Warna teks utama */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Utama */
+.container {
+  max-width: 600px;
+  width: 90%;
+  padding: 2.5rem;
+  background-color: #ffffff; /* Latar belakang konten putih */
+  border-radius: 16px; /* Sudut melengkung */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Bayangan halus untuk efek melayang */
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Section Input */
+.input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 2.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Warna focus biru */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.card {
-  padding: 2em;
+/* Tombol Global */
+button {
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
-.read-the-docs {
-  color: #888;
+button:active {
+  transform: translateY(1px); /* Efek klik */
+}
+
+/* Tombol Add/Update (Utama) */
+button:not(.edit-btn, .delete-btn) {
+  background-color: #3b82f6; /* Biru modern */
+  color: white;
+}
+
+button:not(.edit-btn, .delete-btn):hover {
+  background-color: #2563eb;
+}
+
+/* List Items */
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  border-color: #e2e8f0;
+}
+
+.item-content {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Tombol Edit */
+button.edit-btn {
+  background-color: #f1f5f9; /* Abu-abu muda */
+  color: #475569;
+}
+
+button.edit-btn:hover {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+/* Tombol Delete */
+button.delete-btn {
+  background-color: #fee2e2; /* Merah muda muda */
+  color: #dc2626; /* Merah modern */
+}
+
+button.delete-btn:hover {
+  background-color: #fecaca;
 }
