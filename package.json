@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dairenalxcomscience.github.io/testingIsd/",
+  "homepage": "https://dairenalxcomscience.github.io/testingIsd",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
