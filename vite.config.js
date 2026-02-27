@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Sesuai dengan nama repo di 'homepage' package.json Anda
-  base: "/testingIsd/", 
+  base: "/", 
 })
